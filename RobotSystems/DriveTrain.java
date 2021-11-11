@@ -31,15 +31,11 @@ public class DriveTrain {
 
     public void RightDrive(double p) {
         robotHardware.leftFrontDrive.setPower(p);
-        robotHardware.rightFrontDrive.setPower(0);
         robotHardware.leftBackDrive.setPower(p);
-        robotHardware.rightBackDrive.setPower(0);
     }
 
     public void LeftDrive(double p) {
-        robotHardware.leftFrontDrive.setPower(0);
         robotHardware.rightFrontDrive.setPower(p);
-        robotHardware.leftBackDrive.setPower(0);
         robotHardware.rightBackDrive.setPower(p);
     }
 
