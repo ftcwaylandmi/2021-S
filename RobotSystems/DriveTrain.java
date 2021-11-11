@@ -4,11 +4,11 @@ import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.util.ElapsedTime;
 
-public class Robot {
+public class DriveTrain {
 
     RobotHardware robotHardware = new RobotHardware();
 
-    public void initHW(HardwareMap ahw) {
+    public void initHW(HardwareMap ahw) { // init All Hardware/Devices
         robotHardware.init(ahw);
     }
 

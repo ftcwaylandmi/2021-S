@@ -11,11 +11,15 @@ public class RobotHardware {
     public DcMotor rightFrontDrive = null;
     public DcMotor rightBackDrive = null;
 
+    public DcMotor arm = null;
+
     HardwareMap hwMap = null;
 
     public void init (HardwareMap ahwMap){
         hwMap = ahwMap;
 
+
+        // DriveTrain
         leftFrontDrive = hwMap.get(DcMotor.class, "lfd");
         leftBackDrive = hwMap.get(DcMotor.class, "lbd");
         rightFrontDrive = hwMap.get(DcMotor.class, "rfd");
@@ -35,7 +39,14 @@ public class RobotHardware {
         rightFrontDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         leftBackDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
         rightBackDrive.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        // DriveTrain End
 
+        // ArmSystem
+        arm = hwMap.get(DcMotor.class, "arm");
+        arm.setDirection(DcMotorSimple.Direction.FORWARD);
+        arm.setPower(0);
+        arm.setMode(DcMotor.RunMode.RUN_WITHOUT_ENCODER);
+        // ArmSystem End
     }
 }
 
