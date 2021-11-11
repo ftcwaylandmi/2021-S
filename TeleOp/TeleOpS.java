@@ -13,7 +13,7 @@ public class TeleOpS extends OpMode{
 
     double left = 0.00;
     double right = 0.00;
-    final double slidePower = 1.00;
+    final double SLIDE_POWER = 1.00;
 
     @Override
     public void init() {
@@ -28,9 +28,9 @@ public class TeleOpS extends OpMode{
 
 
         if(gamepad1.right_bumper) { // Slide Right
-            driveTrain.SlideRight(slidePower);
+            driveTrain.SlideRight(SLIDE_POWER);
         } else if(gamepad1.left_bumper) { // Slide Left
-            driveTrain.SlideLeft(slidePower);
+            driveTrain.SlideLeft(SLIDE_POWER);
         } else { // Drive Normal
             driveTrain.LeftDrive(right);
             driveTrain.RightDrive(left);
